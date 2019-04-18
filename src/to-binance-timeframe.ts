@@ -6,6 +6,8 @@ import ow from 'ow'
 import { inTradingviewFormat } from '@strong-roots-capital/is-tradingview-format'
 import { CandleChartInterval } from 'binance-api-node'
 
+export { CandleChartInterval } from 'binance-api-node'
+
 /**
  * Convert a TradingView timeframe to a Binance timeframe.
  *
