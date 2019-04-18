@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/to-binance-timeframe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert a TradingView timeframe to a Binance timeframe",
   "main": "dist/to-binance-timeframe.js",
   "types": "dist/to-binance-timeframe.d.ts",
