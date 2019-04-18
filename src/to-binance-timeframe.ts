@@ -4,6 +4,7 @@
  */
 import ow from 'ow'
 import { inTradingviewFormat } from '@strong-roots-capital/is-tradingview-format'
+import { CandleChartInterval } from 'binance-api-node'
 
 /**
  * Convert a TradingView timeframe to a Binance timeframe.
@@ -11,7 +12,7 @@ import { inTradingviewFormat } from '@strong-roots-capital/is-tradingview-format
  * @param timeframe - TradingView timeframe to be converted into Binance timeframe format
  * @returns The converted timeframe in Binance format
  */
-export function toBinanceTimeframe(timeframe: string): string {
+export function toBinanceTimeframe(timeframe: string): CandleChartInterval {
 
     const AcceptedTradingviewTimeframes: string[] = [
         '1', '3', '5', '15', '30', '1H', '2H', '4H',
@@ -28,5 +29,6 @@ export function toBinanceTimeframe(timeframe: string): string {
     if (/^[0-9]*$/.test(result)) {
        result = result.concat('m')
     }
-    return result
+
+    return result as CandleChartInterval
 }
